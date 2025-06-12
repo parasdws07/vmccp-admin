@@ -1,0 +1,49 @@
+{
+  "project_info": {
+    "project_number": "665956561431",
+    "firebase_url": "https://vmccp-2530a-default-rtdb.firebaseio.com",
+    "project_id": "vmccp-2530a",
+    "storage_bucket": "vmccp-2530a.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:665956561431:android:63a65726ff3be72ee52252",
+        "android_client_info": {
+          "package_name": "com.example.vmccp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAp9soo7XnRbxAKRyuMj6asiG8AdfKz-QQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:665956561431:android:e2e91982e89c3b1de52252",
+        "android_client_info": {
+          "package_name": "com.example.vmccp_admin"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAp9soo7XnRbxAKRyuMj6asiG8AdfKz-QQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
