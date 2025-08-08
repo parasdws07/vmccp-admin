@@ -3,7 +3,7 @@ import 'package:animate_do/animate_do.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'otp.dart'; // Ensure you have an `OtpPage` widget defined in your project
 import 'username_login_screen.dart';
-import 'dashboardscreen.dart'; // Import your DashboardScreen
+// Import your DashboardScreen
 
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
@@ -47,7 +47,7 @@ class LoginPage extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   FadeInUp(
-                    duration: const Duration(milliseconds: 1300),
+                    duration: const Duration(milliseconds: 1000),
                     child: const Text(
                       "Your Mobile No",
                       style: TextStyle(color: Colors.white, fontSize: 18),
@@ -57,51 +57,57 @@ class LoginPage extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 20),
-            Expanded(
-              child: Container(
-                decoration: const BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(60),
-                    topRight: Radius.circular(60),
+          Expanded(
+  child: Container(
+    decoration: const BoxDecoration(
+      color: Colors.white,
+      borderRadius: BorderRadius.only(
+        topLeft: Radius.circular(60),
+        topRight: Radius.circular(60),
+      ),
+    ),
+    child: SingleChildScrollView(
+      padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 20),
+      child: Column(
+        children: <Widget>[
+          const SizedBox(height: 40),  // Reduced from 60 to 40
+          FadeInUp(
+            duration: const Duration(milliseconds: 1000),
+            child: Container(
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(15),  // Increased border radius
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black.withOpacity(0.1),  // Softer shadow
+                    blurRadius: 15,
+                    spreadRadius: 2,
+                    offset: const Offset(0, 5),
+                  ),
+                ],
+              ),
+              child: TextField(
+                controller: phoneController,
+                keyboardType: TextInputType.phone,
+                decoration: InputDecoration(
+                  hintText: "Phone number",
+                  hintStyle: TextStyle(color: Colors.grey.shade400),
+                  border: InputBorder.none,
+                  contentPadding: const EdgeInsets.symmetric(
+                    horizontal: 20,
+                    vertical: 18,
+                  ),
+                  prefixIcon: const Padding(
+                    padding: EdgeInsets.only(left: 15, right: 10),
+                    child: Icon(Icons.phone, color: Colors.brown),
                   ),
                 ),
-                child: Padding(
-                  padding: const EdgeInsets.all(30),
-                  child: Column(
-                    children: <Widget>[
-                      const SizedBox(height: 60),
+              ),
+            ),
+          ),
+          const SizedBox(height: 30),
                       FadeInUp(
-                        duration: const Duration(milliseconds: 1400),
-                        child: Container(
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(10),
-                            boxShadow: const [
-                              BoxShadow(
-                                color: Colors.black26, // Changed shadow color to black with some transparency
-                                blurRadius: 20,
-                                offset: Offset(0, 10),
-                              ),
-                            ],
-                          ),
-                          child: Container(
-                            padding: const EdgeInsets.all(10),
-                            child: TextField(
-                              controller: phoneController,
-                              keyboardType: TextInputType.phone,
-                              decoration: const InputDecoration(
-                                hintText: "Phone number",
-                                hintStyle: TextStyle(color: Colors.grey),
-                                border: InputBorder.none,
-                              ),
-                            ),
-                          ),
-                        ),
-                      ),
-                      const SizedBox(height: 40),
-                      FadeInUp(
-                        duration: const Duration(milliseconds: 1600),
+                        duration: const Duration(milliseconds: 1000),
                         child: MaterialButton(
                           onPressed: () async {
                             final rawPhone = phoneController.text.trim();
@@ -162,7 +168,7 @@ class LoginPage extends StatelessWidget {
                       ),
                       const SizedBox(height: 20),
                       FadeInUp(
-                        duration: const Duration(milliseconds: 1800),
+                        duration: const Duration(milliseconds: 1000),
                         child: const Text(
                           "or",
                           textAlign: TextAlign.center,
@@ -174,7 +180,7 @@ class LoginPage extends StatelessWidget {
                       ),
                       const SizedBox(height: 20),
                       FadeInUp(
-                        duration: const Duration(milliseconds: 2000),
+                        duration: const Duration(milliseconds: 1000),
                         child: MaterialButton(
                           onPressed: () {
                             Navigator.push(
