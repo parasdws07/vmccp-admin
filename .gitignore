@@ -1,30 +1,29 @@
-# Flutter/Dart/Pub related
+cat > .gitignore <<'EOF'
+# Flutter / Dart
+.build/
 .dart_tool/
 .packages
-.pub-cache/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
 .pub/
+.pub-cache/
 build/
-
-# IDE
+# Android/IntelliJ/VSCode
+android/.gradle/
+*.iml
+*.log
 .idea/
 .vscode/
-*.iml
-
-# Logs
-*.log
-
-# OS files
+# Files
+*.lock
+*.apk
+*.aar
+*.keystore
 .DS_Store
 Thumbs.db
-
-# Node (if you have web code too)
-node_modules/
-dist/
-
-# Large media files
+# Large media
 *.mp4
-*.tiff
-*.avi
-*.flv
 *.mov
-*.wmv
+*.avi
+EOF
